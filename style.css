@@ -132,14 +132,13 @@ section {
   .tech-stack {
     margin-top: 20px;
     display: flex;
-    gap: 2rem;
     align-items: center;
     flex-wrap: wrap;
   }
 
   .tech-badge {
     border: 3px solid var(--tech-color);
-    box-shadow: 3px 0 3px var(--tech-color);
+    /* box-shadow: 3px 0 3px var(--tech-color); */
     background-color: var(--tech-color);
     font-weight: 500;
     font-size: 0.9rem;
@@ -148,5 +147,35 @@ section {
     svg {
       width: 50px;
     }
+
+    &:nth-of-type(3) {
+      translate: 0 30px;
+    }
+
+    &:nth-of-type(5) {
+      translate: 0 80px;
+    }
+    &:nth-of-type(7) {
+      translate: 0 30px;
+    }
+    &:nth-of-type(9) {
+      translate: 3px 0;
+    }
+  }
+}
+
+.directional-arrow {
+  color: rgb(255 255 255 / 30%);
+
+  &:nth-child(4) {
+    translate: 0 70px;
+  }
+  &:nth-child(6) {
+    translate: 0 70px;
+    rotate: 90deg;
+  }
+  &:nth-child(8) {
+    translate: 0 00px;
+    rotate: 90deg;
   }
 }

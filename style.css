@@ -78,19 +78,20 @@ section {
       left: calc(0% - 20px);
       top: 0;
       width: 10px;
-      height: 2px;
+      height: 3px;
       background-color: #ff0ccc;
+      border-radius: 0 20px 20px 0;
     }
 
     &::after {
       content: "";
       position: absolute;
       height: 10px;
-      width: 2px;
-      width: 2px;
+      width: 3px;
       top: 0;
       left: calc(0% - 20px);
       background-color: #ff0ccc;
+      border-radius: 0 0 20px 20px;
     }
   }
 
@@ -101,6 +102,10 @@ section {
     background-clip: text;
     color: transparent;
     font-weight: 600;
+
+    @media (width < 440px) {
+      font-size: 2.5rem;
+    }
   }
 
   h2 {
@@ -113,7 +118,7 @@ section {
     max-width: 70ch;
     margin-top: 20px;
     color: rgb(255 255 255 / 70%);
-    line-height: 1.5;
+    line-height: 1.6;
   }
 }
 
@@ -247,10 +252,10 @@ section {
       svg {
         width: 30px;
         height: 30px;
-        background-color: #0000;
         border-radius: 50%;
         border: 1px solid rgb(255 255 255 / 30%);
-        box-shadow: 0 1px 1px rgb(255 255 255 / 30%);
+        background-color: var(--tech-color);
+        filter: drop-shadow(0 1px 12px var(--tech-color));
       }
     }
 

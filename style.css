@@ -153,7 +153,7 @@ section {
 
 #techs {
   width: 100%;
-  position: absolute;
+  height: 1dvh;
   opacity: 0.3;
   top: 0;
   left: 0;
@@ -172,6 +172,7 @@ section {
 
     &:nth-child(1) {
       left: -20px;
+      top: 400px;
       rotate: 20deg;
     }
     &:nth-child(2) {
@@ -180,7 +181,7 @@ section {
       rotate: -65deg;
     }
     &:nth-child(3) {
-      left: 70%;
+      right: 10%;
       top: 50px;
       rotate: -120deg;
     }
@@ -196,6 +197,11 @@ section {
     }
     &:nth-child(6) {
       left: 5%;
+      top: 50px;
+      rotate: 330deg;
+    }
+    &:nth-child(7) {
+      left: 0;
       top: 230px;
       rotate: 330deg;
     }

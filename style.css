@@ -105,12 +105,12 @@ section {
     font-weight: 600;
 
     @media (width < 440px) {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 500;
     margin-top: 5px;
     opacity: 0.2;
@@ -213,7 +213,7 @@ section {
 
 #projects-wrapper {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   place-content: center;
 }
@@ -224,6 +224,8 @@ section {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    position: relative;
+    filter: drop-shadow(0 13px 20px rgb(0 0 0 / 50%));
   }
 
   .card-header {
@@ -259,6 +261,26 @@ section {
 
   p {
     margin-top: 7px;
+    font-size: 0.85rem;
     opacity: 0.8;
+    line-height: 1.4;
+  }
+}
+
+footer {
+  background-color: #11111174;
+  padding: 3rem;
+
+  h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    max-width: 100ch;
   }
 }

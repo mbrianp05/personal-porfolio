@@ -124,6 +124,21 @@ section {
   }
 }
 
+.social-tag {
+  display: flex;
+  align-items: center;
+  padding: 4px 9px;
+  border: 1px solid rgb(255 255 255 / 30%);
+  gap: 4px;
+  border-radius: 3px;
+  box-shadow: 2px -3px 560px #ff0ccc;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: #00bbff;
+  }
+}
+
 #social {
   margin-top: 20px;
   padding-bottom: 20px;
@@ -133,21 +148,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-
-    a {
-      display: flex;
-      align-items: center;
-      padding: 4px 9px;
-      border: 1px solid rgb(255 255 255 / 30%);
-      gap: 4px;
-      border-radius: 3px;
-      box-shadow: 2px -3px 560px #ff0ccc;
-      transition: color 200ms ease-in-out;
-
-      &:hover {
-        color: #00bbff;
-      }
-    }
   }
 }
 
@@ -207,6 +207,7 @@ section {
     font-weight: 700;
     letter-spacing: 1.3px;
     text-transform: uppercase;
+    font-size: 1.7rem;
   }
 }
 
@@ -218,54 +219,18 @@ section {
 }
 
 .card {
-  border: 1px solid rgb(255 255 255 / 30%);
-  border-radius: 1rem;
-  padding: 20px;
-  aspect-ratio: 1;
-  position: relative;
-  transition: scale 0.3s ease-in-out;
-  overflow: hidden;
-
   img {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    height: 100%;
-    filter: contrast(1.1);
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out;
-    background-image: linear-gradient(27deg, #000000e5 30%, transparent);
-  }
-
-  &:hover::before {
-    opacity: 1;
-  }
-
-  &:hover {
-    scale: 1.05;
-  }
-
-  &:hover p {
-    opacity: 0.9;
-    translate: 0 0;
-  }
-
-  &:hover .card-header {
-    opacity: 1;
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
 
   .card-header {
     display: flex;
-    justify-content: space-between;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 7px;
   }
 
   .stack {
@@ -277,38 +242,23 @@ section {
       height: 30px;
       border-radius: 50%;
       background-color: var(--tech-color);
-      filter: drop-shadow(0 1px 12px var(--tech-color));
     }
   }
 
-  .card-link {
+  .card-link a {
+    display: flex;
+    border: 1px solid rgb(255 255 255 / 30%);
+    border-radius: 3px;
+    padding: 4px 9px;
+    gap: 4px;
+
     svg {
-      width: 30px;
-      color: #00b7ff;
-      filter: drop-shadow(0 1px 12px #00b7ff);
+      width: 20px;
     }
   }
 
   p {
-    transition: 300ms ease-in-out;
-    position: absolute;
-    margin-top: auto;
-    line-height: 1.3;
-    translate: 0 45%;
-    opacity: 0;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background-color: rgb(0 0 0 / 30%);
-      border-radius: 100px 100px 0 0;
-      filter: blur(10px);
-    }
+    margin-top: 7px;
+    opacity: 0.8;
   }
 }

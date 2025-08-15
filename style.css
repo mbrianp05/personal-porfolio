@@ -184,7 +184,7 @@ section {
     }
 
     &:nth-child(1) {
-      left: -20px;
+      left: 1%;
       top: 400px;
       rotate: 20deg;
     }
@@ -200,7 +200,7 @@ section {
     }
     &:nth-child(4) {
       right: 20%;
-      top: 230px;
+      top: 190px;
       rotate: -370deg;
     }
     &:nth-child(5) {
@@ -262,10 +262,6 @@ section:not(#hero) {
     margin-top: 7px;
   }
 
-  &:hover .stack svg + svg {
-    margin-left: 5px;
-  }
-
   .stack {
     display: flex;
 
@@ -277,7 +273,6 @@ section:not(#hero) {
 
       & + svg {
         margin-left: -15px;
-        transition: margin 150ms ease-in;
       }
     }
   }

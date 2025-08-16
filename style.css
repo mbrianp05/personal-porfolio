@@ -324,11 +324,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    max-width: 1000px;
+    margin: auto;
   }
 
   .question {
-    max-width: 60%;
-
     h3 {
       font-size: 1.1rem;
       font-weight: 500;

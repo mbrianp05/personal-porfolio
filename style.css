@@ -72,6 +72,14 @@ section {
   position: relative;
   margin-top: 3rem;
 
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 6px;
+    color: #f2ff00;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -336,6 +344,7 @@ footer {
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
+      color: #f2ff00;
     }
 
     p {
@@ -345,7 +354,7 @@ footer {
       max-width: 45ch;
 
       strong {
-        color: #f2ff00;
+        color: #f3f3f3;
       }
     }
 

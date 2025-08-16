@@ -323,10 +323,12 @@ footer {
   .chat-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .question {
+    max-width: 60%;
+
     h3 {
       font-size: 1.1rem;
       font-weight: 500;
@@ -344,6 +346,18 @@ footer {
       strong {
         color: #f2ff00;
       }
+    }
+
+    &:nth-child(1) {
+      rotate: -1.5deg;
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+      rotate: 1.5deg;
+    }
+
+    &:nth-child(3) {
+      rotate: -1deg;
     }
   }
 }

@@ -342,6 +342,7 @@ footer {
       line-height: 1.45;
       margin-top: 10px;
       color: rgb(255 255 255 / 60%);
+      max-width: 45ch;
 
       strong {
         color: #f2ff00;

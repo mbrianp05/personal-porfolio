@@ -299,6 +299,27 @@ section:not(#hero) {
     width: 20px;
   }
 
+  .stars {
+    display: block;
+    margin-left: 5px;
+    padding-left: 5px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        transparent 10%,
+        #999,
+        transparent 90%
+      );
+    }
+  }
+
   p {
     margin-top: 7px;
     font-size: 0.85rem;

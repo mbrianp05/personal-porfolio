@@ -76,8 +76,9 @@ section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 6px;
+    margin-top: 15px;
     color: #f2ff00;
+    font-size: 0.9rem;
   }
 
   &::before {

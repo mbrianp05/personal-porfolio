@@ -322,6 +322,7 @@ section:not(#hero) {
     padding: 5px 10px;
     display: flex;
     gap: 5px;
+    margin-left: 5px;
     align-items: center;
     position: relative;
     color: var(--highlight-clr);

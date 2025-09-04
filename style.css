@@ -283,9 +283,13 @@ section:not(#hero) {
     cursor: pointer;
     gap: 10px;
     border-radius: 3px;
-    padding: 5px 10px;
     border: 1px solid rgb(255 255 255 / 20%);
     font-size: 0.9rem;
+    overflow: hidden;
+
+    > svg {
+      margin-left: 10px;
+    }
   }
 
   .card-header {
@@ -315,18 +319,19 @@ section:not(#hero) {
   }
 
   .stars {
+    padding: 5px 10px;
     display: flex;
     gap: 5px;
     align-items: center;
-    margin-left: 5px;
-    padding-left: 5px;
     position: relative;
     color: var(--highlight-clr);
+
+    animation: skeleton-loading 1s linear infinite alternate;
 
     &::before {
       content: "";
       position: absolute;
-      left: -2px;
+      left: 0;
       width: 1px;
       height: 100%;
       background: #333;
@@ -338,6 +343,15 @@ section:not(#hero) {
     font-size: 0.85rem;
     opacity: 0.8;
     line-height: 1.4;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsla(201, 20%, 80%, 0.137);
+  }
+  100% {
+    background-color: hsla(204, 20%, 95%, 0.289);
   }
 }
 

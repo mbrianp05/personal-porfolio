@@ -372,6 +372,7 @@ footer {
 
   .question {
     transition: 300ms ease-in-out;
+    max-width: 45ch;
 
     &:hover {
       scale: 1.05;
@@ -391,7 +392,6 @@ footer {
       line-height: 1.45;
       margin-top: 7px;
       color: rgb(255 255 255 / 60%);
-      max-width: 45ch;
 
       strong {
         color: #f3f3f3;

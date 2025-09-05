@@ -349,10 +349,10 @@ section:not(#hero) {
 
 @keyframes skeleton-loading {
   0% {
-    background-color: hsla(201, 20%, 80%, 0.137);
+    background-color: hsla(200, 6%, 46%, 0.037);
   }
   100% {
-    background-color: hsla(204, 20%, 95%, 0.289);
+    background-color: hsla(207, 10%, 82%, 0.123);
   }
 }
 

@@ -156,11 +156,11 @@ section {
   display: flex;
   align-items: center;
   padding: 4px 9px;
-  border: 1px solid rgb(255 255 255 / 30%);
   gap: 4px;
   border-radius: 3px;
-  box-shadow: 2px -3px 560px #ff0ccc;
+  box-shadow: 2px -3px 560px #ff0ccc, 0 1px 0.5px rgba(255 255 255 / 20%) inset;
   transition: color 200ms ease-in-out;
+  background-color: rgb(255 255 255 / 2%);
 
   &:hover {
     color: #00bbff;
@@ -292,6 +292,10 @@ section:not(#hero) {
     }
   }
 
+  span:nth-of-type(1) {
+    padding: 5px 10px 5px 0;
+  }
+
   .card-header {
     display: flex;
     gap: 1rem;
@@ -322,12 +326,13 @@ section:not(#hero) {
     padding: 5px 10px;
     display: flex;
     gap: 5px;
-    margin-left: 5px;
     align-items: center;
     position: relative;
     color: var(--highlight-clr);
 
-    animation: skeleton-loading 1s linear infinite alternate;
+    &.loading {
+      animation: skeleton-loading 1s linear infinite alternate;
+    }
 
     &::before {
       content: "";

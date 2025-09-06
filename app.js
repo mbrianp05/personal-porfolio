@@ -9,6 +9,9 @@ const starIconTemplate = document.querySelector("#star-svg-icon");
 projectNames.forEach(async (projectName, index) => {
   const starClone = starIconTemplate.content.cloneNode(true);
 
+  projectStars[index].append(starClone);
+  projectStars[index].classList.add("loading");
+
   try {
     const response = await fetch(
       `https://api.github.com/repos/mbrianp05/${projectName}`
@@ -17,9 +20,13 @@ projectNames.forEach(async (projectName, index) => {
     const { stargazers_count } = await response.json();
 
     if (stargazers_count !== undefined) {
-      projectStars[index].textContent = stargazers_count;
-    } else projectStars[index].remove();
+      projectStars[index].append(document.createTextNode(stargazers_count));
+
+      return;
+    }
+
+    projectStars[index].remove();
   } finally {
-    projectStars[index].prepend(starClone);
+    projectStars[index].classList.remove("loading");
   }
 });
